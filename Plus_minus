@@ -1,0 +1,35 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+def plusMinus(arr):
+    x=len(arr)
+    less=[]
+    greater=[]
+    zero=[]
+    for i in range(0,x):
+        if(arr[i]<0):
+            less.append(arr[i])
+        if(arr[i]>0):
+            greater.append(arr[i])
+        if(arr[i]==0):
+            zero.append(arr[i])
+
+    a=len(zero)
+    b=len(less)
+    c=len(greater)
+    print((c/x))
+    print((b/x))
+    print((a/x))
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
